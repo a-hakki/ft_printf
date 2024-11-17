@@ -32,5 +32,5 @@ int	ft_checknext(const char c, va_list arg)
 	if (c == 'x' || c == 'X')
 		i = ft_puthex(va_arg(arg, unsigned long));
 	if (c == '%')
-		i = ft_puthexup(va_arg(arg, int));
+		write(1, "%", 1);
 }
