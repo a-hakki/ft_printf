@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_checknext.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 13:16:02 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/16 13:05:32 by ahakki           ###   ########.fr       */
+/*   Created: 2024/11/16 10:27:27 by ahakki            #+#    #+#             */
+/*   Updated: 2024/11/17 13:41:56 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(const char *s, ...)
+int	ft_checknext(const char c, va_list arg)
 {
-	int	i = 0;
-	va_list	args;
+	int	len;
+	int	i;
 
-	va_start(args, s);
-	while(s[i])
-	{
-		if (s[i] != '%')
-			write(1, s + i, 1);
-		else if	(ft_isvalid(s[i + 1]))
-		{
-			ft_checknext(s[i + 1], args);
-			i++;
-			va_arg
-		}
-		i++;
-	}
-}
-int main()
-{
-	ft_printf("hakki %H%A%K%K%I");
+	len = 0;
+	i = 0;
+	if (c == 'c')
+		i = ft_putchar(va_arg(arg, int));
+	if (c == 's')
+		i = ft_putstr(va_arg(arg, char*));
+	if (c == 'p')
+		i = ft_putadrs(va_arg(arg, void*));
+	if (c == 'i' || c = 'd')
+		i = ft_putnum(va_arg(arg, int));
 }

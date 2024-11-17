@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_isvalid.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 13:16:02 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/16 13:05:32 by ahakki           ###   ########.fr       */
+/*   Created: 2024/11/16 13:12:35 by ahakki            #+#    #+#             */
+/*   Updated: 2024/11/17 13:47:47 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libftpritf.h"
 
-int	ft_printf(const char *s, ...)
+int	ft_isvalid(const char c)
 {
-	int	i = 0;
-	va_list	args;
+	int		i;
+	char	ch;
+	char	s[] = "cspiduxX%"
 
-	va_start(args, s);
-	while(s[i])
+	i = 0;
+	ch = (char)c;
+	while (s[i])
 	{
-		if (s[i] != '%')
-			write(1, s + i, 1);
-		else if	(ft_isvalid(s[i + 1]))
-		{
-			ft_checknext(s[i + 1], args);
-			i++;
-			va_arg
-		}
+		if (s[i] == ch)
+			return (1);
 		i++;
 	}
-}
-int main()
-{
-	ft_printf("hakki %H%A%K%K%I");
+	return (0);
 }
