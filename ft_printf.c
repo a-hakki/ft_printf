@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:16:02 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/16 13:05:32 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/17 16:03:58 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,11 @@ int	ft_printf(const char *s, ...)
 		{
 			ft_checknext(s[i + 1], args);
 			i++;
-			va_arg
 		}
 		i++;
 	}
 }
 int main()
 {
-	ft_printf("hakki %H%A%K%K%I");
+	ft_printf("github: %ca-hakki", 10);
 }
