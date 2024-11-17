@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 10:27:27 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/17 13:41:56 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/17 14:21:35 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,10 @@ int	ft_checknext(const char c, va_list arg)
 		i = ft_putadrs(va_arg(arg, void*));
 	if (c == 'i' || c = 'd')
 		i = ft_putnum(va_arg(arg, int));
+	if (c == 'u')
+		i = ft_putunum(va_arg(arg, unsigned long));
+	if (c == 'x' || c == 'X')
+		i = ft_puthex(va_arg(arg, unsigned long));
+	if (c == '%')
+		i = ft_puthexup(va_arg(arg, int));
 }
