@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 13:12:35 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/17 15:52:01 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/17 21:32:21 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int	ft_isvalid(const char c)
 {
 	int		i;
 	char	ch;
-	char	s[] = "cspiduxX%";
+	char	*s;
 
+	s = "cspiduxX%";
 	i = 0;
 	ch = (char)c;
 	while (s[i])
