@@ -1,8 +1,9 @@
-NAME = libft.a
+NAME = libftprintf.a
 source =  \
 	  ft_printf.c \
 	  ft_checknext.c \
-	  ft_isvalid.c
+	  ft_isvalid.c \
+	  ft_putchar.c
 
 object = $(source:.c=.o)
 
