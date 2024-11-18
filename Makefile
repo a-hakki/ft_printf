@@ -3,7 +3,8 @@ source =  \
 	  ft_printf.c \
 	  ft_checknext.c \
 	  ft_isvalid.c \
-	  ft_putchar.c
+	  ft_putchar.c \
+	  ft_putstr.c
 
 object = $(source:.c=.o)
 

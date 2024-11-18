@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 09:47:57 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/18 14:20:03 by ahakki           ###   ########.fr       */
+/*   Created: 2024/11/18 14:06:12 by ahakki            #+#    #+#             */
+/*   Updated: 2024/11/18 14:24:26 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libftprintf.h"
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+int	ft_putstr(const char *s)
+{
+	int	i;
+	int	len;
 
-# include <unistd.h>
-# include <stdarg.h>
-
-int	ft_printf(const char *s, ...);
-int	ft_checknext(const char c, va_list arg);	
-int	ft_isvalid(const char c);
-int	ft_putchar(char c);
-int	ft_putstr(const char *s);
-
-#endif
+	i = 0;
+	len = 0;
+	if (!s)
+		return (write(1, "(null)", 6));
+	while (s[len])
+	{
+		i = write(1, &s[len], 1);
+		if (i == -1)
+			return (i);
+		len++;
+	}
+	return (len);
+}

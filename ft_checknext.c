@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 10:27:27 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/17 21:33:45 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/18 14:18:49 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_checknext(const char c, va_list arg)
 	i = 0;
 	if (c == 'c')
 		i = ft_putchar(va_arg(arg, int));
-	/*if (c == 's')
+	if (c == 's')
 		i = ft_putstr(va_arg(arg, char*));
-	if (c == 'p')
+	/*if (c == 'p')
 		i = ft_putadrs(va_arg(arg, void*));
 	if (c == 'i' || c = 'd')
 		i = ft_putnum(va_arg(arg, int));
@@ -30,6 +30,6 @@ int	ft_checknext(const char c, va_list arg)
 	if (c == 'x' || c == 'X')
 		i = ft_puthex(va_arg(arg, unsigned long), c);
 	if (c == '%')
-		write(1, "%", 1);*/
+		i = write(1, "%", 1);*/
 	return (i);
 }

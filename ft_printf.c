@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:16:02 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/17 21:52:07 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/18 14:28:35 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int	ft_printf(const char *s, ...)
 
 int	main(void)
 {
-	int	i = ft_printf("github: %c%c%c%c%c%c%c\n", 97, '-', 'h','a', 'k', 'k', 'i');
+	char *s = NULL;
+	int	i = ft_printf("%s%c%s\n", "hello ", 97, s);
 	printf("%i", i);
 	return (0);
 }
