@@ -42,3 +42,8 @@ int	ft_printf(const char *s, ...)
 	}
 	return (len);
 }
+
+int main()
+{
+	ft_printf("%p", NULL);
+}
