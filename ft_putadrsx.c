@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putadrsx.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 09:47:57 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/18 15:23:49 by ahakki           ###   ########.fr       */
+/*   Created: 2024/11/19 16:10:05 by ahakki            #+#    #+#             */
+/*   Updated: 2024/11/19 18:11:32 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_putadrsx(size_t a)
+{
+	char	*s;
+	int		len;
+	int		i;
 
-int	ft_printf(const char *s, ...);
-int	ft_checknext(const char c, va_list arg);	
-int	ft_isvalid(const char c);
-int	ft_putchar(char c);
-int	ft_putstr(const char *s);
-int	ft_putadrs(void *p);
-
-#endif
+	len = 0;
+	i = 0;
+	s = "0123456789abcdef";
+	if (a > 15)
+		i = ft_putadrsx(a / 16);
+	if (i == -1)
+		return (-1);
+	len += i;
+	i = write(1, &(s[a % 16]), 1);
+	if (i == -1)
+		return (-1);
+	return (len + i);
+}

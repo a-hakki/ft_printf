@@ -6,11 +6,11 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 10:27:27 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/18 15:35:14 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/19 18:11:35 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_checknext(const char c, va_list arg)
 {

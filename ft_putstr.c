@@ -6,10 +6,11 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:06:12 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/18 14:24:26 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/19 18:16:42 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libftprintf.h"
+
+#include "ft_printf.h"
 
 int	ft_putstr(const char *s)
 {
@@ -19,12 +20,12 @@ int	ft_putstr(const char *s)
 	i = 0;
 	len = 0;
 	if (!s)
-		return (write(1, "(null)", 6));
+		ft_putstr("(null)");
 	while (s[len])
 	{
 		i = write(1, &s[len], 1);
 		if (i == -1)
-			return (i);
+			return (-1);
 		len++;
 	}
 	return (len);

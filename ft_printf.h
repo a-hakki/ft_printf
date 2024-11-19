@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isvalid.c                                       :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 13:12:35 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/19 18:15:15 by ahakki           ###   ########.fr       */
+/*   Created: 2024/11/16 09:47:57 by ahakki            #+#    #+#             */
+/*   Updated: 2024/11/19 18:20:57 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_isvalid(const char c)
-{
-	int		i;
-	char	ch;
-	char	*s;
+# include <unistd.h>
+# include <stdarg.h>
+# include <stddef.h>
 
-	s = "cspiduxX%";
-	i = 0;
-	ch = (char)c;
-	while (s[i])
-	{
-		if (s[i] == ch)
-			return (1);
-		i++;
-	}
-	return (0);
-}
+int	ft_printf(const char *s, ...);
+int	ft_checknext(const char c, va_list arg);	
+int	ft_isvalid(const char c);
+int	ft_putchar(char c);
+int	ft_putstr(const char *s);
+int	ft_putadrs(void *p);
+int	ft_putadrsx(size_t a);
+
+#endif

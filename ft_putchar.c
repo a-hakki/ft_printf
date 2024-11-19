@@ -6,11 +6,11 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:25:02 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/18 13:35:31 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/19 18:16:00 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
