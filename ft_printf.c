@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:16:02 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/20 11:58:52 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/20 14:03:18 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	ft_printf(const char *s, ...)
 #include "stdio.h"
 int main()
 {
-	ft_printf("%x\n", -1);
-	ft_printf("%X\n", -1);
-	printf("%x\n", -1);
-	printf("%X\n", -1);
+	printf(" NULL %s NULL", NULL);
+	//ft_printf("%X\n", -1);
+	//printf("%s\n", -1);
+	//printf("%X\n", -1);
 }

@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:06:12 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/19 18:16:42 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/20 14:02:29 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_putstr(const char *s)
 	i = 0;
 	len = 0;
 	if (!s)
-		ft_putstr("(null)");
+		return (ft_putstr("(null)"));
 	while (s[len])
 	{
 		i = write(1, &s[len], 1);
