@@ -6,13 +6,13 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 09:46:31 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/20 11:07:24 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/20 12:09:06 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_check(int a)
+static int	ft_check(int a)
 {
 	if (a == -1)
 		return (-1);

@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 14:52:19 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/19 18:11:30 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/20 12:02:26 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_putadrs(void *p)
 {
 	int		i;
-	int		len;*
+	int		len;
 	size_t	a;
 
 	a = (size_t)p;
@@ -25,7 +25,7 @@ int	ft_putadrs(void *p)
 	len = i;
 	if (a == 0)
 		return (write(1, "0", 1) + len);
-	i = ft_putadrsx(a);
+	i = ft_putadrsx(a, 'x');
 	if (i == -1)
 		return (-1);
 	len += i;

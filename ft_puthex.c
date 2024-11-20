@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunum.c                                       :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 11:14:58 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/20 12:08:52 by ahakki           ###   ########.fr       */
+/*   Created: 2024/11/20 11:30:36 by ahakki            #+#    #+#             */
+/*   Updated: 2024/11/20 11:55:54 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_check(int a)
+int	ft_puthex(unsigned int a, char c)
 {
-	if (a == -1)
-		return (-1);
-	return (a);
-}
-
-int	ft_putunum(unsigned int u)
-{
-	int	i;
-	int	len;
-
-	i = 0;
-	len = 0;
-	if (u <= 9)
-		i = ft_putchar(u + 48);
-	else
-	{
-		len = ft_check(ft_putnum(u / 10));
-		i = ft_putchar((u % 10) + 48);
-	}
-	if (i != -1 && len != -1)
-		return (len + i);
-	return (-1);
+	return (ft_putadrsx(a, c));
 }

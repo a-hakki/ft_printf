@@ -8,7 +8,8 @@ source =  \
 	  ft_putadrs.c \
 	  ft_putadrsx.c \
 	  ft_putnum.c \
-	  ft_putunum.c
+	  ft_putunum.c \
+	  ft_puthex.c
 
 object = $(source:.c=.o)
 

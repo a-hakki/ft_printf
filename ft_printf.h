@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 09:47:57 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/20 11:22:47 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/20 11:56:05 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int	ft_isvalid(const char c);
 int	ft_putchar(char c);
 int	ft_putstr(const char *s);
 int	ft_putadrs(void *p);
-int	ft_putadrsx(size_t a);
+int	ft_putadrsx(size_t a, char c);
 int	ft_putnum(int n);
 int	ft_putunum(unsigned int n);
+int	ft_puthex(unsigned int a, char c);
 
 #endif
