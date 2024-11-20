@@ -6,7 +6,8 @@ source =  \
 	  ft_putchar.c \
 	  ft_putstr.c \
 	  ft_putadrs.c \
-	  ft_putadrsx.c
+	  ft_putadrsx.c \
+	  ft_putnum.c
 
 object = $(source:.c=.o)
 
