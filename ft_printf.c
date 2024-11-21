@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:16:02 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/20 14:03:18 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/21 11:28:41 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,35 +19,24 @@ int	ft_printf(const char *s, ...)
 	int		len;
 	va_list	args;
 
+	if (!s)
+		return (0);
 	i = 0;
 	len = 0;
 	va_start(args, s);
 	while (s[i])
 	{
 		if (s[i] != '%')
+			len += write(1, s + i, 1);
+		else
 		{
-			write(1, s + i, 1);
-			len++;
-		}
-		else 
-		{
-			i++;
-			if (ft_isvalid(s[i]))
-				check = ft_checknext(s[i], args);
-			if(check < 0)
+			if (ft_isvalid(s[i + 1]))
+				check = ft_checknext(s[++i], args);
+			if (check < 0)
 				return (-1);
 			len += check;
 		}
 		i++;
 	}
 	return (len);
-}
-
-#include "stdio.h"
-int main()
-{
-	printf(" NULL %s NULL", NULL);
-	//ft_printf("%X\n", -1);
-	//printf("%s\n", -1);
-	//printf("%X\n", -1);
 }
