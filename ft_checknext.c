@@ -6,7 +6,7 @@
 /*   By: ahakki <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 10:27:27 by ahakki            #+#    #+#             */
-/*   Updated: 2024/11/21 11:30:26 by ahakki           ###   ########.fr       */
+/*   Updated: 2024/11/22 15:48:48 by ahakki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ int	ft_checknext(const char c, va_list arg)
 		i = ft_puthex(va_arg(arg, unsigned int), c);
 	if (c == '%')
 		i = write(1, "%", 1);
+	if (i == -1)
+		return (va_end(arg), -1);
 	return (i);
 }
