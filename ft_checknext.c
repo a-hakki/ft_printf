@@ -32,6 +32,6 @@ int	ft_checknext(const char c, va_list arg)
 	if (c == '%')
 		i = write(1, "%", 1);
 	if (i == -1)
-		return (va_end(arg), -1);
+		return (-1);
 	return (i);
 }
